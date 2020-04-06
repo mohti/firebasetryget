@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public  static  final String Key_avb ="avb";
     public  static  final String KEY_PRICE= "price";
 
-    public FirebaseFirestore  db= FirebaseFirestore.getInstance();
+    private FirebaseFirestore  db= FirebaseFirestore.getInstance();
 
 
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
               data.put(Keyveg,vegName);
               data.put(Key_avb ,vegAvablity);
               data.put(KEY_PRICE,vegPrice);
-              db.collection("Journal")
+              db.collection("name")
                       .document("DataTable")
                       .set(data)
                       .addOnSuccessListener(new OnSuccessListener<Void>() {
